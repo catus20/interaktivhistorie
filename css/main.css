@@ -1,0 +1,9 @@
+#slide1{
+width: 500px;
+height: auto;
+}
+
+.slide1 {
+    display: grid;
+    place-items: center;
+}
