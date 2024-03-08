@@ -11,12 +11,22 @@
     <p>Velkommen til våres interaktive historie. Her kan du selv velge hvordan historien skal utvikle seg. God førnøyelse!</p>
     <button onclick="hideContent()">Start historien</button>
 
+    <div class="div1">
+        <h1> Du sitter bak i ein bil, med ein ukjent sjåfør, kva gjer du?</h1>
+        <img id="img1" src="img/_830ee543-929f-4551-b3d3-a02efa8c2c0f.jpeg" alt="bil baksete">
+        <button> 1. Du spør sjåføren kven han er</button>
+        <button> 2. Du spør sjåføren kvar de skal</button>
+        <button> 3. Ingenting.</button>
+        
+       
+    </div>
+
     <script>
         function hideContent() {
             // Get references to HTML elements
-            var heading = document.querySelector('h1');
-            var paragraph = document.querySelector('p');
-            var button = document.querySelector('button');
+            let heading = document.querySelector('h1');
+            let paragraph = document.querySelector('p');
+            let button = document.querySelector('button');
 
             // Hide elements
             if (heading) {
