@@ -46,6 +46,7 @@ img {
 #youdied, span {
     color: red;
     text-decoration: underline;
+    text-transform: uppercase;
 }
 
 footer { /* Denne koden forteller footer elementet korleis den skal sjå ut - This code tells the footer element how to look*/
