@@ -9,7 +9,26 @@
 <body>
     <h1>Interaktiv Historie</h1>
     <p>Velkommen til våres interaktive historie. Her kan du selv velge hvordan historien skal utvikle seg. God førnøyelse!</p>
-    <button onclick="hideCode()">Start historien</button>
+    <button onclick="hideContent()">Start historien</button>
+
+    <script>
+        function hideContent() {
+            // Get references to HTML elements
+            var heading = document.querySelector('h1');
+            var paragraph = document.querySelector('p');
+            var button = document.querySelector('button');
+
+            // Hide elements
+            if (heading) {
+                heading.style.display = 'none';
+            }
+            if (paragraph) {
+                paragraph.style.display = 'none';
+            }
+            if (button) {
+                button.style.display = 'none';
+            }
+        }
     </script>
-    </body>
-     </html>
+</body>
+</html>

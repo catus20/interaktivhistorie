@@ -1,3 +1,7 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #slide1{
 width: 500px;
 height: auto;
@@ -6,4 +10,5 @@ height: auto;
 .slide1 {
     display: grid;
     place-items: center;
+    gap: 50px;
 }
