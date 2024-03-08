@@ -1,44 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interaktiv Historie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <h1>Interaktiv Historie</h1>
-    <p>Velkommen til våres interaktive historie. Her kan du selv velge hvordan historien skal utvikle seg. God førnøyelse!</p>
-    <button onclick="hideContent()">Start historien</button>
 
-    <div class="div1">
-        <h1> Du sitter bak i ein bil, med ein ukjent sjåfør, kva gjer du?</h1>
-        <img id="img1" src="img/_830ee543-929f-4551-b3d3-a02efa8c2c0f.jpeg" alt="bil baksete">
-        <button> 1. Du spør sjåføren kven han er</button>
-        <button> 2. Du spør sjåføren kvar de skal</button>
-        <button> 3. Ingenting.</button>
-        
-       
+<body>
+    <div class="start" id="startContent">
+        <h1>Interaktiv Historie</h1>
+        <p>Velkommen til våres interaktive historie. Her kan du selv velge hvordan historien skal utvikle seg. God
+            førnøyelse!</p>
+        <button onclick="startStory()">Start historien</button>
     </div>
 
-    <script>
-        function hideContent() {
-            // Get references to HTML elements
-            let heading = document.querySelector('h1');
-            let paragraph = document.querySelector('p');
-            let button = document.querySelector('button');
+    <div class="div1" id="storyContent">
+        <div id="startStory">
+            <h1>Du sitter bak i en bil, med en ukjent sjåfør, hva gjør du?</h1>
+            <img id="img1" src="img/_830ee543-929f-4551-b3d3-a02efa8c2c0f.jpeg" alt="bil baksete">
+            <button onclick="select1()">1. Du spør sjåføren kven han er</button>
+            <button onclick="select1()">2. Du spør sjåføren kvar de skal</button>
+            <button onclick="select3()">3. Ingenting.</button>
+        </div>
 
-            // Hide elements
-            if (heading) {
-                heading.style.display = 'none';
-            }
-            if (paragraph) {
-                paragraph.style.display = 'none';
-            }
-            if (button) {
-                button.style.display = 'none';
-            }
-        }
-    </script>
+        <div id="select1on1">
+            <button onclick="restart()">Start på nytt</button>
+            <h1 id="youdied"> Du dødde </h1>
+            <h1> Du trykte på 1 eller 2. Sjåføren likte ikkje dette og kasta deg ut av bilen.</h1>
+            <img src="img/_abf35870-73ec-40a7-9173-ca6c42ecf4b2.jpeg" alt="død">
+        </div>
+        <div id="select3on1">
+            <h1> Du valgte å ikkje gjøre noko. Sjåføren kjørar ut på motorvegen så køyrar han til eit øde hus.</h1>
+            <h1> Han sitter og spiser mat og ser på TV. Kva gjer du?</h1>
+            <img src="img/_a0ceca31-4e03-4d47-bea4-ffb639ef0712.jpeg" alt="hus">
+            <button onclick="select1on2()"> 1. Du går ner og spør om mat</button>
+            <button onclick="select2on2()"> 2. Du går ut og prøver å stikke av</button>
+        </div>
+        <div id="select2on2">
+            <button onclick="restart()">Start på nytt</button>
+            <h1> Du prøvde å stikka. Mannen tok deg og <span>du dødde.</span></h1>
+            <img src="img/_2a69926c-ee29-435a-9260-77c9a7b1062f.jpeg" alt="død">
+        </div>
+        <div id="select1on2">
+            <h1> Du valgte å gå ner og spør om mat. Mannen ga deg litt mat. Kva gjer du no?</h1>
+            <img src="img/_8d7d21db-ead2-4477-a321-838b9da3d3b2.jpeg" alt="mann som gir mat">
+            <button onclick="select1on3()"> 1. Du spør om du kan få brus til maten</button>
+            <button onclick="select2on3()"> 2. Du spør om du kan få vatn</button>
+            <button onclick="select3on2()"> 3. Du kallar han for ein idiot</button>
+        </div>
+        <div id="select1on3">
+            <button onclick="restart()">Start på nytt</button>
+            <h1> I DETTE HUSET DRIKK ME VATN <span> DU DØDDE.</span></h1>
+            <img src="img/_2a69926c-ee29-435a-9260-77c9a7b1062f.jpeg" alt="død">
+            <h1> The end </h1>
+        </div>
+        <div id="select2on3">
+            <button onclick="restart()">Start på nytt</button>
+            <h1> I DETTE HUSET DRIKK ME BRUS <span> DU DØDDE. </span></h1>
+            <img src="img/_2a69926c-ee29-435a-9260-77c9a7b1062f.jpeg" alt="død">
+            <h1> The end </h1>
+        </div>
+        <div id="select3on3">
+            <button onclick="restart()">Start på nytt</button>
+            <h1> Han likte ikkje at du kalte han for idiot <span> DU DØR.</span></h1>
+            <img src="img/_2a69926c-ee29-435a-9260-77c9a7b1062f.jpeg" alt="død">
+            <h1> The end </h1>
+        </div>
+    </div>
+    <script src="java/script.js"></script>
+    <footer> 
+        <h1> Laga med hjarta av Emre og Markus</h1>
+    </footer>
 </body>
+
 </html>
